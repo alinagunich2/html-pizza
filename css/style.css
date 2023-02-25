@@ -255,3 +255,11 @@ width: 489px;
         color: rgb(186, 179, 179);
         margin-left: 358px;
 }
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.close{
+    display: none;
+}
