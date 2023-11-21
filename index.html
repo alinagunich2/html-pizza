@@ -6,8 +6,8 @@
     <title>Document</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet/less"  href="css/style.less">
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
 </head>
 
 <body>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="main-action">
-                    <button class="btn">Выбрать пиццу</button>
+                    <button class="btn" id="choose-pizza">Выбрать пиццу</button>
                 </div>
             </div>
             <div class="main-img">
@@ -104,9 +104,9 @@
             </div>
         </div>
     </section>
-    <section class="products">
+    <section class="products s">
         <div class="container">
-            <h2 class="products-title">Выберите свою любимую пиццу </h2>
+            <h2 class="products-title" id="products-title">Выберите свою любимую пиццу </h2>
             <div class="products-items">
                 <div class="product">
                     <div class="product-img">
@@ -115,7 +115,7 @@
                     <div class="product-title">Мясная Делюкс</div>
                     <div class="product-text">Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -125,7 +125,7 @@
                     <div class="product-title">Морская Премиум</div>
                     <div class="product-text">Перец, сыр, креветки, кальмары, мидии, лосось</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -135,7 +135,7 @@
                     <div class="product-title">Бекон и Сосиски</div>
                     <div class="product-text">Бекон, сыр, сосиски, ананас, томатная паста</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -145,7 +145,7 @@
                     <div class="product-title">Куриная Делюкс</div>
                     <div class="product-text">Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart" id="no-touch">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -155,7 +155,7 @@
                     <div class="product-title">Барбекю Премиум</div>
                     <div class="product-text">Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чили</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -165,7 +165,7 @@
                     <div class="product-title">Пепперони Дабл</div>
                     <div class="product-text">Пепперони, сыр, колбаса 2 видов: обжаренная и вареная</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -175,7 +175,7 @@
                     <div class="product-title">Куриное трио</div>
                     <div class="product-text">Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, грибы, соус для пиццы</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
                 <div class="product">
@@ -185,7 +185,7 @@
                     <div class="product-title">Сырная</div>
                     <div class="product-text">Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный</div>
                     <div class="product-action">
-                        <div class="btn">В корзину</div>
+                        <div class="btn btn-add-to-cart">В корзину</div>
                     </div>
                 </div>
             </div>
@@ -199,12 +199,12 @@
                     Мы  гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
                 </div>
             </div>
-            <div class="order-form">
-                <input type="text" class="order-input" placeholder="Ваше имя">
-                <input type="text" class="order-input" placeholder="Адрес доставки">
-                <input type="text" class="order-input" placeholder="Телефон">
-                <button class="btn">Оформить заказ</button>
-            </div>
+            <form class="order-form">
+                <input type="text" class="order-input" id="product-input" placeholder="Пицца">
+                <input type="text" class="order-input" id="address-input" placeholder="Адрес доставки">
+                <input type="text" class="order-input" id="phone-input"placeholder="Телефон +7 (999) 999-99-99" pattern="^\+7\s\(9\d{2}\)\s\d{3}-\d{2}-\d{2}" required>
+                <button class="btn" id="create-order">Оформить заказ</button>
+            </form>
             <div class="order-img">
                 <img src="img/order/pizzzzza.png" alt="pizza">
             </div>
@@ -215,18 +215,32 @@
             <div class="logo">
                 <img src="img/header/logo.png" alt="logo">
             </div>
-            <div class="rights">Все права защищены, 2020</div>
+            <div class="rights">Все права защищены, <span>2020</span></div>
         </div>
     </footer>
-    <script>
-        document.getElementById('burger').onclick = function() {
-            document.getElementById('menu').classList.add('open')
-        }
-        document.querySelectorAll('#menu *').forEach((item) => {
-            item.onclick = () => {
-                document.getElementById('menu').classList.remove('open');
-            }
-        });
+    <div class="cookie">
+        <div class="cookie-title">
+            <div>Мы использ Cookie</div>
+            <span class="cookie-accept">&times;</span>
+        </div>
+            <div class="cookie-text">
+                Для корректн раб сайта
+            </div>
+            <div class="cookie-button">
+                <button class="btn cookie-accept">Принять</button>
+            </div>
+        
+    </div>
+    <script src="scripts/jquery-3.6.4.min.js"></script>
+    <script src="scripts/script.js">
+        // document.getElementById('burger').onclick = function() {
+        //     document.getElementById('menu').classList.add('open')
+        // }
+        // document.querySelectorAll('#menu *').forEach((item) => {
+        //     item.onclick = () => {
+        //         document.getElementById('menu').classList.remove('open');
+        //     }
+        // });
     </script>
 </body>
 

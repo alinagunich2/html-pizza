@@ -25,10 +25,14 @@ body{
     font-family: Muller, sans-serif;
 }
 
+.wite-box(){
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+    padding: 16px 0 15px 0;
+}
+
 .header{
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
-        padding: 16px 0 15px 0;
+    .wite-box()
 }
 .container{
  max-width: 1200px;
@@ -71,12 +75,15 @@ width: 489px;
         font-size: 45px;
         font-family: MullerExtraBold, sans-serif;
         line-height: 1.222;
+  &:hover{
+    background-color: black;
+  }
 }
 
-.double-title{
+.ble-title{
     color: rgb(185, 145, 80)
 }
-.double-title span{
+.ble-title span{
     color: #ffaf18;
 }
 .main-advantages {
@@ -106,7 +113,7 @@ width: 489px;
 }
 .advantage-description {
         font-size: 16px;
-        color: rgb(185, 145, 80); 
+        color: rgb(185, 145, 80);
 }
 .main-action {
     margin-top: 60px;
@@ -122,6 +129,9 @@ width: 489px;
         border: 0;
         padding: 22px;
         box-sizing: border-box;
+  &:hover{
+    background-color: black;
+  }
 }
 .main-img {
 }
@@ -196,7 +206,7 @@ width: 489px;
         font-family: MullerExtraBold, sans-serif;
         margin-bottom: 65px;
 }
-.double-title {
+.ble-title {
 }
 .order-text-message {
         font-size: 16px;
@@ -240,9 +250,7 @@ width: 489px;
 }
 
 .footer {
-    padding: 16px 15px 0;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 0px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+    .wite-box()
 }
 .footer .container {
     display: flex;
@@ -263,3 +271,41 @@ width: 489px;
 .close{
     display: none;
 }
+
+
+.cookie {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.093);
+    max-width: 330px;
+    display: none;
+}
+.cookie-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.cookie-title span{
+    font-size: 40px;
+    cursor: pointer;
+}
+.cookie-text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+}
+.cookie-button .btn{
+    border: 0;
+    outline: none;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.btn {
+}
+
+@import 'adaptive';
